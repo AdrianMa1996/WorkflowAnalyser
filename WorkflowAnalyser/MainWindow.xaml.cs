@@ -11,6 +11,10 @@ namespace WorkflowAnalyser
         public MainWindow()
         {
             InitializeComponent();
+
+            var docPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FunctionIndexDescriptions.json");
+
+            FunctionIndexDocs.Load(docPath);
         }
 
         private void OpenGraph_Click(object sender, RoutedEventArgs e)

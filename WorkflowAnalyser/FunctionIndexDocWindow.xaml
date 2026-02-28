@@ -1,0 +1,21 @@
+﻿<Window x:Class="WorkflowAnalyser.FunctionIndexDocWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Function Description" Width="720" Height="520"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="16" FontWeight="SemiBold"
+               Text="{Binding Header}" TextWrapping="Wrap"/>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <TextBlock Text="{Binding Body}" TextWrapping="Wrap"
+                 FontFamily="Consolas"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
